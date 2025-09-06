@@ -1,0 +1,239 @@
+/* Updated Style for Smart Health Record System */
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #e3f2fd, #ede7f6);
+  color: #333;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.header {
+  background-color: #6200ea;
+  color: white;
+  padding: 1.5rem;
+  text-align: center;
+  font-size: 1.8rem;
+  position: relative;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.main-nav {
+  margin-top: 10px;
+}
+
+.main-nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 12px;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.main-nav a:hover {
+  color: #c5cae9;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 1rem;
+  min-height: calc(100vh - 200px);
+}
+
+.card {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  width: 320px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.card h2 {
+  text-align: center;
+  color: #512da8;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 0.75rem;
+  margin: 0.75rem 0;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  background-color: #fefefe;
+}
+
+button {
+  background-color: #7c4dff;
+  color: #fff;
+  border: none;
+  padding: 0.75rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #512da8;
+}
+
+.dashboard {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.dashboard h2 {
+  text-align: center;
+  color: #4a148c;
+}
+
+.dashboard h3 {
+  margin-top: 2rem;
+  color: #6a1b9a;
+}
+
+.dashboard ul {
+  list-style: none;
+  padding: 0;
+}
+
+.dashboard li {
+  background: #fff;
+  margin: 0.5rem 0;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.dashboard li i {
+  margin-right: 10px;
+  color: #7c4dff;
+}
+
+.footer {
+  background-color: #ede7f6;
+  color: #555;
+  text-align: center;
+  padding: 1.5rem;
+  border-top: 1px solid #ddd;
+  font-size: 0.95rem;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 0.8rem;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #3f51b5;
+  font-size: 0.95rem;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.accessibility-toolbar {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 999;
+}
+
+.accessibility-toolbar button {
+  font-size: 1rem;
+  padding: 6px 10px;
+  margin: 2px;
+  background-color: #f3e5f5;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.high-contrast {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
+.high-contrast .card,
+.high-contrast .dashboard,
+.high-contrast .footer,
+.high-contrast .header {
+  background-color: #111 !important;
+  color: #fff !important;
+}
+
+.visually-hidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  .main-nav a {
+    display: inline-block;
+    margin: 6px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+body.dark-mode {
+  background: linear-gradient(to right, #121212, #1e1e1e);
+  color: #eee;
+}
+
+.dark-mode .card {
+  background: rgba(255, 255, 255, 0.08);
+  color: #eee;
+}
+
+.dark-mode input,
+.dark-mode select {
+  background-color: #222;
+  color: #eee;
+  border: 1px solid #555;
+}
+
+.dark-mode button {
+  background-color: #bb86fc;
+  color: #000;
+}
+
+.dark-mode .footer {
+  background-color: #1c1c1c;
+  color: #aaa;
+  border-top: 1px solid #333;
+}

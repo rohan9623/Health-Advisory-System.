@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Patient Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="script.js" defer></script>
+  <style>
+    body {
+      background: linear-gradient(to right, #fce4ec, #f8bbd0);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #333;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    .header {
+      background-color: #d81b60;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      border-bottom: 4px solid #ad1457;
+    }
+    .dashboard {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    .dashboard-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+    .card {
+      background-color: #fff;
+      border-left: 6px solid #d81b60;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+    .card h3 {
+      color: #c2185b;
+    }
+    .footer {
+      background-color: rgba(0,0,0,0.1);
+      padding: 1rem;
+      text-align: center;
+      border-top: 2px solid #f48fb1;
+      margin-top: 2rem;
+      color: #333;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    .footer-links a {
+      color: #880e4f;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+    button {
+      background-color: #d81b60;
+      color: white;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #c2185b;
+    }
+    .dark-mode {
+      background: #1e1e1e;
+      color: #eee;
+    }
+    .dark-mode .card {
+      background: #2c2c2c;
+      color: #eee;
+    }
+    .dark-mode .header {
+      background-color: #4a148c;
+      border-bottom: 4px solid #311b92;
+    }
+    .dark-mode .footer {
+      background-color: #2c2c2c;
+      color: #ccc;
+      border-top: 2px solid #555;
+    }
+    .dark-mode button {
+      background-color: #880e4f;
+    }
+    .dark-mode button:hover {
+      background-color: #ad1457;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <h1><i class="fas fa-user-injured"></i> Patient Dashboard</h1>
+  </header>
+
+  <div class="dashboard">
+    <h2><i class="fas fa-heartbeat"></i> Welcome, Patient!</h2>
+    
+    <div class="dashboard-grid">
+      <div class="card">
+        <h3><i class="fas fa-notes-medical"></i> Medical History</h3>
+        <ul id="history-list"></ul>
+      </div>
+      <div class="card">
+        <h3><i class="fas fa-calendar-alt"></i> Upcoming Appointments</h3>
+        <ul>
+          <li><i class="fas fa-hospital-user"></i> 20 July 2025 – 10:00 AM – Apollo Clinic</li>
+          <li><i class="fas fa-hospital-user"></i> 2 Aug 2025 – 2:00 PM – MedCare Center</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3><i class="fas fa-pills"></i> Prescriptions</h3>
+        <ul id="prescription-list"></ul>
+      </div>
+      <div class="card">
+        <h3><i class="fas fa-lightbulb"></i> Health Tips</h3>
+        <ul>
+          <li><i class="fas fa-check-circle"></i> Stay hydrated, drink at least 2L of water/day.</li>
+          <li><i class="fas fa-check-circle"></i> Get 7–8 hours of sleep regularly.</li>
+          <li><i class="fas fa-check-circle"></i> Eat a balanced diet and walk daily.</li>
+        </ul>
+      </div>
+    </div>
+    <div style="text-align: center; margin-top: 2rem;">
+      <button onclick="logout()" aria-label="Logout">
+        <i class="fas fa-sign-out-alt"></i> Logout
+      </button>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="#"><i class="fas fa-phone"></i> +91 9774713781</a>
+      <a href="#"><i class="fas fa-envelope"></i> rohansarkar491@gmail.com</a>
+      <a href="#"><i class="fas fa-globe"></i> chakrabortyarunima217@gmail.com</a>
+    </div>
+    <p>&copy; 2025 Smart Health Record System | Empowering Healthy Living 💚</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Doctor Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <style>
+    body {
+      background: linear-gradient(to right, #e0f7fa, #ffffff);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #333;
+    }
+    .header {
+      background-color: #0288d1;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      border-bottom: 4px solid #01579b;
+    }
+    .dashboard {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    .dashboard-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+    .card {
+      background-color: #ffffff;
+      border-left: 6px solid #0288d1;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    .card h3 {
+      color: #0277bd;
+    }
+    .footer {
+      background-color: #e0f2f1;
+      padding: 1rem;
+      text-align: center;
+      border-top: 2px solid #b2dfdb;
+      margin-top: 2rem;
+    }
+    .footer-links a {
+      color: #00796b;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+    button {
+      background-color: #0288d1;
+      color: white;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0277bd;
+    }
+  </style>
+ >
+
+</head>
+<body>
+  <header class="header">
+    <h1><i class="fas fa-user-md"></i> Doctor Dashboard</h1>
+  </header>
+
+  <div class="dashboard">
+    <h2><i class="fas fa-stethoscope"></i> Welcome, Doctor!</h2>
+    <div class="dashboard-grid">
+      <div class="card">
+        <h3><i class="fas fa-calendar-check"></i> Today's Appointments</h3>
+        <ul id="appointment-list">
+>
+          <li><i class="fas fa-user"></i> Rohan Sarkar – 10:00 AM</li>
+          <li><i class="fas fa-user"></i> Priya Mehra – 11:30 AM</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3><i class="fas fa-users"></i> Patient Records</h3>
+        <ul id="patient-list"></ul>
+
+          <li><i class="fas fa-id-badge"></i> Ankit Das – 25 Yrs – Cough & Fever</li>
+          <li><i class="fas fa-id-badge"></i> Sneha Roy – 31 Yrs – Migraine</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3><i class="fas fa-file-medical"></i> Prescriptions Uploaded</h3>
+        <ul>
+          <li><i class="fas fa-file-prescription"></i> 18 July 2025 – Amoxicillin – For Ankit</li>
+          <li><i class="fas fa-file-prescription"></i> 14 July 2025 – Ibuprofen – For Sneha</li>
+        </ul>
+      </div>
+      
+      <div class="card">
+  <h3><i class="fas fa-clipboard-list"></i> Add Notes</h3>
+  <textarea id="doctor-note" placeholder="Write remarks or observations..." rows="4" style="width:100%; padding:10px; border-radius:6px;"></textarea>
+  <button onclick="saveNote()" style="margin-top: 1rem;"><i class="fas fa-paper-plane"></i> Save Note</button>
+  <p id="note-status" style="color: green; margin-top: 0.5rem;"></p>
+  <button onclick="clearNote()">🧹 Clear Note</button>
+
+</div>
+
+    </div>
+    <div style="text-align: center; margin-top: 2rem;">
+      <button onclick="window.location.href='index.html'" aria-label="Logout">
+        <i class="fas fa-sign-out-alt"></i> Logout
+      </button>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="#"><i class="fas fa-phone"></i> +91 9774713781</a>
+      <a href="#"><i class="fas fa-envelope"></i> rohansarkar491@gmail.com</a>
+      <a href="#"><i class="fas fa-globe"></i> chakrabortyarunima217@gmail.com</a>
+    </div>
+    <p>&copy; 2025 Smart Health Record System | Caring for Every Patient 🩺</p>
+  </footer>
+</body>
+</html>
